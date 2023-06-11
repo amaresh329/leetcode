@@ -27,10 +27,9 @@ class GFG
 class Solution{
     static int trailingZeroes(int N){
         int count =0;
-       while(N>=5){
-           N=N/5;
-           count=count+N;
-       }
+      for(int i=5;i<=N;i=i*5){
+          count =count +(N/i);
+      }
         return count;
     }
 }
